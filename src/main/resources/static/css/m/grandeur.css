@@ -1,0 +1,165 @@
+.fq-whole {
+    margin-bottom: 60px;
+}
+
+.fq-return {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fq-searchbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background: rgba(61, 5,5, 0.4);
+}
+
+.fq-grandeur-title,
+.fq-grandeur-price {
+    border-bottom: 1px solid #f3e7e3;
+}
+
+.fq-grandeur-price,
+.fq-grandeur-like {
+    color: #8f8f8f;
+}
+
+.fq-grandeur-price .icon-quan2 {
+    font-size: 24px;
+    position: relative;
+    top: 5px;
+    color: #f54d23;
+    line-height: 0.6;
+}
+
+.fq-grandeur-like i {
+    color: #f54d23;
+}
+
+.fq-explain {
+    margin-top: -28px;
+    right: 16%;
+    left: 16%;
+}
+
+.fq-grandeur-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.fq-grandeur-menu .icon-shouye {
+    position: relative;
+    top: 2px;
+}
+
+.fq-grandeur-index {
+    position: relative;
+    top: 2.5px;
+}
+
+.fq-grandeur-menu .icon-liaotiankefu {
+    position: relative;
+    top: 4px;
+}
+
+.fq-grandeur-service {
+    position: relative;
+    top: 2.5px;
+}
+
+.fq-grandeur-menu ul li:first-child ul li a {
+    color: #8f8f8f;
+}
+
+/*ä¯ÀÀÆ÷¹ºÂò*/
+.fq-browser,
+.fq-browser:hover,
+.fq-browser:focus {
+    width: 100%;
+    height: 49px;
+    background: #FB874E;
+    box-shadow: none;
+}
+
+.fq-browser a,
+.fq-browser a:visited,
+.fq-browser a:hover,
+.fq-browser a:focus,
+.fq-browser a:active {
+    color: white;
+}
+/*ä¯ÀÀÆ÷¹ºÂò*/
+
+/*ÌÔ¿ÚÁî¹ºÂò*/
+.fq-amoy,
+.fq-amoy:hover,
+.fq-amoy:focus,
+.fq-amoy:active {
+    width: 150%;
+    height: 36px;
+    color: white;
+    background: #f54d23;
+    box-shadow: none;
+}
+/*ÌÔ¿ÚÁî¹ºÂò*/
+
+.fq-amoy-buy .am-modal-dialog,
+.fq-service-wechat .am-modal-dialog {
+    border-radius: 5px;
+}
+
+.fq-amoy-buy .am-modal-hd,
+.fq-service-wechat .am-modal-hd {
+    padding: 10px;
+    background: #f54d23;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.fq-amoy-buy .am-modal-hd .am-close,
+.fq-service-wechat .am-modal-hd .am-close {
+    font-size: 36px;
+    top: 8px;
+    right: 8px;
+    color: white;
+    font-weight: 100;
+    opacity: 1;
+}
+
+.copy_taowords a {
+    background: #f54d23;
+    color: white;
+}
+
+.fq-instructions {
+    background: #f3f3f3;
+    border-radius: 0 0 5px 5px;
+    color: #86564B;
+}
+/*ÎÒÒªÍÆ¹ã*/
+.fq-promotion,
+.fq-promotion:visited,
+.fq-promotion:hover,
+.fq-promotion:active,
+.fq-promotion:focus {
+    position: fixed;
+    bottom: 110px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: #f3e7e3;
+    border: 1px solid #f54d23;
+    line-height: 14px;
+    padding-top: 5px;
+    color: #f54d23;
+}
+
+/*ÎÒÒªÍÆ¹ã*/

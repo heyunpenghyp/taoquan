@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="categoryMap" >
+    <select id="getCategoryNameCollectionByCategoryName" resultType="CategoryMap" parameterType="CategoryMap">
+        select
+          category_name_collection categoryNameCollection
+        FROM
+          t_category_map
+        WHERE
+          category = #{category}
+    </select>
+
+    <select id="getAll" resultType="CategoryMap">
+        select
+        category_name_collection categoryNameCollection,
+        category category
+        FROM
+        t_category_map
+    </select>
+
+    <update id="updateCategoryMap"  parameterType="CategoryMap">
+        update t_category_map
+        set
+         category_name_collection = #{categoryNameCollection}
+         where
+         category = #{category}
+    </update>
+</mapper>

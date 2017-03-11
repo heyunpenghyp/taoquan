@@ -1,0 +1,503 @@
+/*区域划分*/
+body, html {
+    background: #f3f3f3;
+    position: inherit;
+    overflow: auto;
+    overflow-x: hidden;
+    color: #3d0505;
+    width: 100%;
+}
+
+.main {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: #eeeeee;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+/*顶部导航*/
+.header_img {
+    position: relative;
+    top: 1px;
+    width: 28px;
+    height: 28px;
+}
+
+.header_content {
+    position: fixed;
+    height: 40px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #f54d23;
+}
+
+.am-icon-search {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    color: white;
+}
+
+input, .am-form input[type="text"].am-radius::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: white;
+}
+
+input, .am-form input[type="text"].am-radius {
+    color: white;
+    height: 30px;
+    border: .1rem solid #f54d23;
+    background: #E4371B;
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+/*菜单选项栏*/
+nav {
+    background: white;
+    position: relative;
+    top: 0;
+}
+
+nav ul li a, nav ul li a:hover, nav ul li a:focus, .fq-type ul li a, .fq-type ul li a:hover, .fq-type ul li a:focus {
+    color: #8f8f8f;
+}
+
+nav ul li a img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.active {
+    color: #f54d23;
+    border-bottom: .3rem solid #f54d23;
+}
+
+.fq-type {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    border-left: .1rem solid #f3e7e3;
+    border-right: .1rem solid #f3e7e3;
+}
+
+.fq-type ul li {
+    background: white;
+    width: 25%;
+    border-top: .1rem solid #f3e7e3;
+    border-left: .1rem solid #f3e7e3;
+}
+
+
+/*虚拟消息框*/
+.fq-information {
+    position:absolute;
+    top:50px;
+    left:0.5rem;
+    z-index:10;
+    background:rgba(93, 92, 92, 0.8);
+    color:white;
+}
+
+.fq-information div {
+    line-height:20px;
+}
+
+.fq-information img {
+    width:40px;
+    height:40px;
+    border:2px solid rgba(93, 92, 92, 0.9);
+}
+
+
+/*虚拟消息框*/
+
+
+/*自定义*/
+.fq-custom {
+    z-index:1;
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    -webkit-animation: myfirst 0.6s linear 1s infinite alternate;
+    animation: myfirst 0.6s linear 1s infinite alternate;
+}
+
+.fq-custom img {
+    width: 100%;
+    line-height: 40px;
+    width: 40px;
+    height:40px;
+    -webkit-filter: drop-shadow(0 3px 8px rgba(84,30,15,.8));
+    filter: drop-shadow(0 3px 8px rgba(84,30,15,.8));
+}
+
+@keyframes myfirst {
+    0% {
+        transform: translate(5px);
+    }
+
+    25% {
+        transform: translate(-5px);
+    }
+
+    50% {
+        transform: translate(5px);
+    }
+
+    75% {
+        transform: translate(-5px);
+    }
+
+    100% {
+        transform: translate(5px);
+    }
+}
+
+@-webkit-keyframes myfirst {
+    0% {
+        transform: translate(5px);
+    }
+
+    25% {
+        transform: translate(-5px);
+    }
+
+    50% {
+        transform: translate(5px);
+    }
+
+    75% {
+        transform: translate(-5px);
+    }
+
+    100% {
+        transform: translate(5px);
+    }
+}
+
+/*返回顶部*/
+.am-gotop-fixed .am-gotop-icon {
+    line-height: 40px;
+}
+
+.am-gotop-fixed {
+    width: 40px;
+    position: absolute;
+    display: none;
+    opacity: 0.9;
+    bottom: 60px;
+}
+
+
+/*商品失效*/
+.fq-lose {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.fq-lose div:first-child {
+    border: #6A6161 .2rem solid;
+    border-radius: 6px;
+    width: 70%;
+}
+
+.fq-lose img {
+    width: 70%;
+    position: relative;
+    top: -40px;
+}
+
+.fq-confirm {
+    background: #f54d23;
+    color: white;
+}
+
+
+/*分类排序*/
+.fq-category {
+    background: rgba(255, 255, 255,0.6);
+}
+
+.fq-category span {
+    color: #8f8f8f;
+}
+
+.fq-category a {
+    color: #7a7a7a;
+}
+
+.fq-category .sort-active {
+    color: #0e90d2;
+}
+
+
+/*主要色值*/
+.fq-color-gray {
+    color: #8f8f8f;
+}
+
+.fq-color-danger {
+    color: #f54d23;
+}
+
+.fq-background-red {
+    background: #f54d23;
+}
+
+.am-form-field {
+    border: 0;
+}
+
+.am-form-field:focus {
+    background: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/*自定义推荐模块*/
+
+.fq-recommend li {
+    background:#faf5f5;
+    height:60px;
+    width:-webkit-calc(50% - 6.2px);
+    width:calc(50% - 6.2px);
+    margin-right:6.2px;
+}
+
+.fq-recommend li img{
+    width:60px;
+    height:60px;
+
+}
+
+.fq-recommend li a,
+.fq-recommend li a:visited,
+.fq-recommend li a:focus,
+.fq-recommend li a:hover,
+.fq-recommend li a:active{
+    width:100%;
+    color:#3d0505;
+}
+
+/*自定义推荐模块*/
+
+
+/*一排主面板*/
+.index_panel .mian-img {
+    margin-top: -10px;
+    position: relative;
+    min-width: 133px;
+    height: 133px;
+    float: left;
+    box-shadow: 2px 0px 5px #888888;
+}
+
+.index_panel .quan-tip {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    left: 55px;
+    width: 90px;
+}
+
+.index_panel .panel-center {
+    padding-left: 40px;
+    height: 123px;
+}
+
+.index_panel .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 42px;
+}
+
+.index_panel .button {
+    width: 50%;
+    padding: 0.5em 0em;
+}
+
+.index_panel .price {
+    font-size: 2.5rem;
+    line-height: 25px;
+}
+
+.index_panel .panel-bottom {
+    background-color: #FFFFFF;
+    color: #616161;
+}
+
+.index_panel .panel-bottom .panel-top-border {
+    border-top-style: dashed;
+    border-top-width: 1px;
+    margin-top: 2px;
+    padding-top: 2px;
+    border-color: #BCBCBC;
+}
+
+.index_panel .border_triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    overflow: hidden;
+    border-color: transparent #5EB95E transparent transparent;
+    border-style: dotted solid dotted dotted;
+    margin-right: 0px;
+    position: relative;
+    top: -3px;
+    left: -6px;
+}
+
+.index_panel .free_shipping {
+    line-height: 10px;
+    top: -7px;
+    position: relative;
+    margin-left: 0px;
+    padding-left: 2px;
+    padding-right: 5px;
+    left: -6px;
+}
+
+/*双排主面板*/
+.fq-goods {
+    border: #f3f3f3 solid .1rem;
+    background: #fff;
+    color: #3d0505;
+}
+
+.fq-img {
+    width: 145px;
+    height: 145px;
+}
+
+.fq-goods-border {
+    border: .2rem #f3e7e3 dashed;
+}
+
+.fq-goods-border {
+    border: .2rem #f3e7e3 solid;
+}
+
+.am-thumbnail {
+    border: none;
+}
+
+.fq-title, .fq-title:hover, .fq-title:focus {
+    color: #3d0505;
+}
+
+.fq-abstract {
+    color: #8f8f8f;
+    line-height: 2;
+    position: relative;
+    top: 2px;
+}
+
+.fq-price,
+.fq-buy,
+.fq-buy:hover,
+.fq-buy:focus,
+.fq-price:hover,
+.fq-price:focus {
+    color: #f54d23;
+}
+
+.fq-post {
+    background-color: rgb(94,185,94);
+}
+
+.fq-coupon {
+    background-color: rgb(161,156,243);
+    clear: right;
+}
+
+.fq-buy {
+    border: .1rem solid #f54d23;
+}
+
+.fq-share,
+.fq-share:hover,
+.fq-share:focus {
+    border: .1rem solid #f5a425;
+    color: #f5a425;
+}
+
+.fq-invalid {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+}
+
+.fq-invalid img {
+    position: relative;
+    top: -30px;
+    width: 80%;
+}
+
+.fq-invalid div:first-child {
+    width: 70%;
+    border: 0.3rem solid #6a6161;
+    border-radius: 0.5rem;
+}
+
+.fq-explain {
+    position: absolute;
+    width: 180px;
+    margin-top: -22px;
+    right: 20%;
+    left: 20%;
+    color: #f54d23;
+}
+
+/*三版主面板*/
+.fq-image {
+    width: 124px;
+    height: 124px;
+}
+
+.fq-free {
+    background: #40d514;
+}
+
+.first-found {
+    position: relative;
+    top: -18px;
+    width: 22px;
+    height: 22px;
+    background: #eeeeee;
+}
+
+.second-found {
+    position: relative;
+    top: 8px;
+    width: 22px;
+    height: 22px;
+    background: #eeeeee;
+}
+
+.fq-reason {
+    color: #f54d23;
+}
+
+.fq-a-focus:hover, .fq-a-focus:focus {
+    color: white;
+}

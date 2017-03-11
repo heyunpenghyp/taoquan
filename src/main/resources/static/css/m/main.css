@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+/*按钮样式
+#ClickMe {
+	width: 200px;
+	height: 30px;
+	border: 1px solid #C40000;
+	background-color: #000;
+	color: #FFF;
+	margin:0 auto;
+}*/
+#goodcover {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: 0.50;
+    filter: alpha(opacity=80);
+}
+#code {
+    width: 80%;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    left: 45%;
+    z-index: 1002;
+    border-radius:4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.close1 {
+    float: right;
+    padding: 10px;
+}
+#closebt img {
+    width: 20px;
+}
+.close2{
+    text-align: center;
+    width: 100%;
+}
+.close2 img {
+    width: 90%;
+    border: 1px solid #000000;
+
+}
+.close3{
+    width: 90%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    font-size: 14px;
+}
+.close4{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+#close_Float_000{
+    width: 100%;
+    height: 51px;
+}
+#close_Float_001{
+    overflow: hidden;
+    width: 100%;
+    position:fixed;
+    bottom :0;
+    background-color: #FFFFFF;
+    height: 46px;
+}
+.close_STYLE2 {
+    color: #FF6600;
+    font-family: 'Helvetica Neue', Arial;
+    font-weight: 700;
+    font-size: 14px;
+}
+.close_STYLE3 {
+    font-size: 20px;
+    font-family: 'Helvetica Neue', Arial;
+    color: #FF6600;
+}
+.close_STYLE4 {
+    color: #A2A2A1;
+    font-family: 'Helvetica Neue', Arial;
+    text-decoration: line-through;
+    font-size: 14px;
+    font-weight: 400;
+}
+.close_STYLE5 {
+    color: #FF3C00;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Arial;
+    font-weight: 700;
+}
+.close_STYLE7 {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.close_STYLE8 {
+    color: #FFFFFF;
+    font-size: 18px;
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="quanProduct" >
+    <insert id="save" parameterType="QuanProduct">
+        INSERT INTO t_quan_product (
+            product_id,
+            product_name,
+            image_url,
+            item_url,
+            category,
+            price,
+            sold_num ,
+            commission_rebate,
+            commission,
+            sell_id,
+            shop_name,
+            plat_name,
+            quan_id,
+            quan_total_num,
+            quan_info,
+            quan_begin_date,
+            quan_end_date,
+            quan_url,
+            quan_weight,
+            compose_url,
+            transfer,
+            create_time,
+            update_time
+        ) VALUES
+        (
+            #{productId},
+            #{productName},
+            #{imageUrl},
+            #{itemUrl},
+            #{category},
+            #{price},
+            #{soldNum},
+            #{commissionRebate},
+            #{commission},
+            #{sellId},
+            #{shopName},
+            #{platName},
+            #{quanId},
+            #{quanTotalNum},
+            #{quanInfo},
+            #{quanBeginDate},
+            #{quanEndDate},
+            #{quanUrl},
+            #{quanWeight},
+            #{composeUrl},
+            #{transfer},
+            now(),
+            now()
+        )
+    </insert>
+
+    <select id="getTop10WeightToTransfer" resultType="QuanProduct" parameterType="String">
+        select
+          product_id productId,
+          item_url itemUrl,
+          quan_id quanId,
+          sell_id sellId
+        FROM
+          T_QUAN_PRODUCT
+        WHERE
+          TRANSFER = 2
+          AND CREATE_TIME <![CDATA[ > ]]> #{today}
+          AND commission_rebate <![CDATA[ < ]]> 25
+          ORDER BY sold_num DESC
+          limit 10
+    </select>
+
+    <update id="updateDXTransfer"  parameterType="QuanProduct">
+        update T_QUAN_PRODUCT
+        set
+         commission_rebate = #{commissionRebate},
+         compose_url = #{composeUrl},
+         transfer = 1,
+         is_hd = 2,
+         update_time = now()
+         where
+         product_id = #{productId}
+    </update>
+
+
+    <update id="updateQqhdTransfer"  parameterType="QuanProduct">
+        update T_QUAN_PRODUCT
+        set
+        commission_rebate = #{commissionRebate},
+        transfer = 1,
+        is_hd = 1,
+        update_time = now()
+        where
+        product_id = #{productId}
+    </update>
+
+    <update id="updateNoDxTransfer"  parameterType="QuanProduct">
+        update T_QUAN_PRODUCT
+        set
+        transfer = 1,
+        update_time = now()
+        where
+        product_id = #{productId}
+    </update>
+
+    <delete id="deleteInvalid" parameterType="QuanProduct">
+        DELETE
+        FROM
+        t_quan_poroduct
+        WHERE
+          product_id = #{productId}
+    </delete>
+
+    <select id="getTop100ToCheck" resultType="QuanProduct" parameterType="QuanProduct">
+        select
+        product_id productId,
+        item_url itemUrl,
+        quan_id quanId,
+        sell_id sellId,
+        quan_url quanUrl
+        FROM
+        T_QUAN_PRODUCT
+        WHERE
+        last_check_time <![CDATA[ < ]]> #{lastCheckTime}
+        ORDER BY last_check_time
+        limit 100
+    </select>
+    
+    <delete id="deleteDownloadRecord">
+        delete
+        FROM
+        t_download_record
+    </delete>
+
+    <insert id="insertDownloadRecord">
+        insert into t_download_record
+        (download_to_db_date)
+        values
+        (now())
+    </insert>
+
+    <select id="getXlsToDbDay" resultType="java.util.Date">
+        select
+        download_to_db_date downloadToDbDate
+        FROM
+        t_download_record
+    </select>
+</mapper>

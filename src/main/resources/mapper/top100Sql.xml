@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top100" >
+    <insert id="save" parameterType="Top100">
+        INSERT INTO t_top_100 (
+        title,
+        pic_url,
+        quan_amount,
+        quan_url,
+        price,
+        tkl ,
+        sold_num,
+        create_time
+        ) VALUES
+        (
+        #{title},
+        #{picUrl},
+        #{quanAmount},
+        #{quanUrl},
+        #{price},
+        #{tkl},
+        #{soldNum},
+        now()
+        )
+    </insert>
+
+    <select id="query" resultType="Top100">
+        select
+        id id,
+        title title,
+        pic_url picUrl,
+        quan_amount quanAmount,
+        quan_url quanUrl,
+        price price,
+        sold_num soldNum,
+        tkl tkl,
+        create_time createTime
+        FROM
+        T_TOP_100
+        order by create_time desc
+        limit 100
+    </select>
+
+    <delete id="del" parameterType="java.lang.Integer">
+        delete from t_top_100 where id = #{id}
+    </delete>
+
+</mapper>
