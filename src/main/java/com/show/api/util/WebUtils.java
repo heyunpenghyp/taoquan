@@ -587,9 +587,5 @@ public   class WebUtils {
 		return result;
 	}
 	
-	public static void main(String adfas[]) throws  Exception{
-		
-		
-	}
 
 }

@@ -119,11 +119,7 @@ public class ShowApiRequest extends NormalRequest  {
 		return str;
 	}
 	
- 
- 
-	
-	public static void main(String adfas[]) throws  Exception{ }
-	
+
 	
 	
 	

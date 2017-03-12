@@ -194,9 +194,9 @@ public class XlsQuanToDb implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        List<CategoryMap> categoryMapList = categoryMapDao.getAll();
-        for (CategoryMap categoryMap: categoryMapList) {
-            categoryAllMap.put(categoryMap.getCategory(), Arrays.asList(categoryMap.getCategoryNameCollection().split(",")));
-        }
+//        List<CategoryMap> categoryMapList = categoryMapDao.getAll();
+//        for (CategoryMap categoryMap: categoryMapList) {
+//            categoryAllMap.put(categoryMap.getCategory(), Arrays.asList(categoryMap.getCategoryNameCollection().split(",")));
+//        }
     }
 }

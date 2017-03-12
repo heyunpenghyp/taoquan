@@ -226,18 +226,6 @@ public class NormalRequest   {
 		}
 		return res;
 	}
-	
-	public static void main(String adfas[]) throws  Exception{ 
-//		NormalRequest req =new NormalRequest("http://120.26.199.48:8081/?q=java&p=4&ct=&ff=&order=&_type=")
-//		.addHeadPara("origin", "http://www.xilinjie.com")
-//		.addHeadPara("cccc", "head");
-//		byte b[]=req.getAsByte();
-//		String str=new String(b,"utf-8");
-//		System.out.println(str); 
-//		Calendar now=Calendar.getInstance();
-//		now.add(Calendar.DATE, -10);
-////		now.get(Calendar.WEEK_OF_YEAR);
-//		System.out.println(now.get(Calendar.DAY_OF_YEAR));
-	}
+
 	
 }
