@@ -30,4 +30,4 @@ logging:
     org:
       quartz: error
       springframework: error
-    root: debug
+    root: info
