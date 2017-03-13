@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
-    <title>宝妈联盟天猫内部优惠券</title>
+    <title>猪猪淘精选-天猫内部优惠券</title>
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/amazeui.min.css">
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/style.css" />
 
@@ -17,29 +17,6 @@
     <script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/fastclick.min.js"></script>
     <script>$(function() {FastClick.attach(document.body);});</script>
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-
-    <!-- 微信自定义接口 -->
-    <#--<script>-->
-        <#--wx.config({"debug":false,"beta":false,"appId":"wx625f400e3fb7f513","nonceStr":"ccXbJJImhD","timestamp":1488702469,"url":"https:\/\/baomalianmeng.m.fqapps.com\/index\/index\/sort\/8?key=%E7%9D%A1%E8%A1%A3","signature":"e6ff347277bf08d1193e36355c3900239303794b","jsApiList":["onMenuShareAppMessage","onMenuShareTimeline","chooseImage","uploadImage","downloadImage","hideMenuItems"]});-->
-        <#--wx.ready(function(){-->
-            <#--wx.hideMenuItems({-->
-                <#--menuList: ["menuItem:share:timeline"]-->
-            <#--});-->
-            <#--wx.onMenuShareAppMessage({-->
-                <#--title: document.title,-->
-                <#--desc: "淘宝天猫特价秒杀商品内部优惠券，来我们群买东西就可以这么便宜！",-->
-                <#--link: window.location.href ,-->
-                <#--imgUrl: ""-->
-            <#--});-->
-            <#--wx.onMenuShareTimeline({-->
-                <#--title: document.title,-->
-                <#--desc: "淘宝天猫特价秒杀商品内部优惠券，来我们群买东西就可以这么便宜！",-->
-                <#--link: window.location.href,-->
-                <#--imgUrl: ""-->
-            <#--});-->
-        <#--});-->
-    <#--</script><!-- 微信自定义接口 &ndash;&gt;-->
-
 </head>
 
 <body>
@@ -198,7 +175,7 @@
     </ul>
 
     <div style="" class="am-text-xs am-text-center am-margin-vertical-sm">
-        猪猪淘天猫内部优惠券 ©版权所有
+        猪猪淘精选-天猫内部优惠券 ©版权所有
     </div>
 </div>
 
@@ -333,11 +310,11 @@
                             <span>使用说明：</span>
                             <span>复制淘口令后打开【手机淘宝】即可领取优惠券购买！</span>
                         </span>
-                <br />
-                        <span>
-                            <span>温馨提示：</span>
-                            手机无【手机淘宝】者，可选择浏览器购买方式哦~
-                        </span>
+                <#--<br />-->
+                        <#--<span>-->
+                            <#--<span>温馨提示：</span>-->
+                            <#--手机无【手机淘宝】者，可选择浏览器购买方式哦~-->
+                        <#--</span>-->
             </div>
         </div>
     </div>

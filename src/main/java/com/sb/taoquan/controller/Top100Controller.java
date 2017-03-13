@@ -47,5 +47,20 @@ public class Top100Controller {
         return "pc/top100/save";
     }
 
+    @RequestMapping(value = "/query",method = RequestMethod.GET)
+    public String query(Model model){
+        List<Top100> list = top100Dao.query();
+        model.addAttribute("productList", list);
+        return "pc/top100/query";
+    }
 
+
+    @ResponseBody
+    @RequestMapping(value = "/del",method = RequestMethod.POST)
+    public Map del(@RequestParam("id") int id) {
+        Map result = new HashMap();
+        result.put("status", 200);
+        top100Dao.del(id);
+        return result;
+    }
 }

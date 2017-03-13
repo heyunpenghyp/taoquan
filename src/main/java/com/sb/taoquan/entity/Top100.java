@@ -2,6 +2,8 @@ package com.sb.taoquan.entity;
 
 import org.apache.commons.lang.time.DateUtils;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -19,6 +21,7 @@ public class Top100 {
     private Date createTime;
 
     private String sxInfo;
+    private String creatTimeDesc;
 
     public int getId() {
         return id;
@@ -95,6 +98,14 @@ public class Top100 {
     public String getSxInfo() {
         if (DateUtils.addMinutes(createTime, 60).getTime() > (new Date()).getTime()) {
             return "一小时内上新";
+        }
+        return "";
+    }
+
+    public String getCreatTimeDesc() {
+        if (createTime != null) {
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return df.format(createTime);
         }
         return "";
     }
