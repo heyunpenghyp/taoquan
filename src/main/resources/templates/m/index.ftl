@@ -10,6 +10,8 @@
     <title>猪猪淘精选-天猫内部优惠券</title>
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/amazeui.min.css">
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/style.css" />
+    <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/allinone.css" />
+
 
 
     <script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/jquery.min.js"></script>
@@ -288,10 +290,10 @@
             <div class="am-margin-vertical am-margin-horizontal-lg">
                 <div class="fq-goods-border fq-background-white am-text-center am-margin-top am-padding-vertical am-padding-horizontal-sm">
                     <div class="fq-explain am-center am-text-center">
-                        <span class="fq-nowrap fq-text-white am-padding-horizontal-sm">长按框内 > 全选 > 复制</span>
+                        <span class="fq-nowrap fq-text-white am-padding-horizontal-sm">长按框内 &gt; 全选 &gt; 复制</span>
                     </div>
-                    <span id="copy_key_ios">￥RUeWkGEPkN￥</span>
-                    <textarea style="display: none;height:20px" id="copy_key_android" type="text" class="am-form-field am-text-center am-text-sm" oninput="regain();">￥RUeWkGEPkN￥</textarea>
+                    <span id="copy_key_ios" style="display: none;">￥b1scOsZfEV￥</span>
+                    <textarea style="height: 20px; display: inline-block;" id="copy_key_android" type="text" class="am-form-field am-text-center am-text-sm" oninput="regain();">￥b1scOsZfEV￥</textarea>
                 </div>
             </div>
             <!--二合一淘口令结束-->
@@ -324,53 +326,32 @@
     $(function () {
         //事件监听
         //------------------------------------------
-        var ua = navigator.userAgent.toLowerCase();
-        if (ua.match(/iphone os 10/i) == "iphone os 10") {
-            $('.fq-amoy-buy .copy_taowords').show();
-            var clipboard = new Clipboard('.share', {
-                target: function() {
-                    return document.querySelector('.copy_taoword_content');
-                }
-            });
-            clipboard.on('success', function(e){
-                e.trigger.innerHTML="已复制";
-                e.trigger.style.backgroundColor="#9ED29E";
-                e.trigger.style.borderColor="#9ED29E";
-                $(".copy_taoword_content").html('');
-                console.info('Action:', e.action);
-                console.info('Text:', e.text);
-                console.info('Trigger:', e.trigger);
-                e.clearSelection();
-            });
-            clipboard.on('error', function(e) {
-                $(".copy_taoword_content").html('');
-                $("#fq_alert_info").html("<div class=\"am-text-danger\">由于您的浏览器不兼容或当前网速较慢，复制失败，请手动复制或更换主流浏览器！</div><div class=\"am-margin\" style=\"text-align: left;\">"+$(".copy_taoword_content").html()+"</div>");
-                $('#fq_alert').modal();
-            });
-            if('' == 1){
-                //复制推广
-                var clipboard_select = new Clipboard('.share_generalize', {
-                    target: function(trigger) {
-                        return document.querySelector('.agent_content');
-                    }
-                });
-
-                clipboard_select.on('success', function(e){
-                    $(".agent_content").hide();
-                    e.trigger.innerHTML="已复制";
-                    e.trigger.style.backgroundColor="#9ED29E";
-                    e.trigger.style.borderColor="#9ED29E";
-                    e.clearSelection();
-                });
-
-                clipboard_select.on('error', function(e) {
-                    $(".agent_content").hide();
-                    $("#fq_alert_info").html("<div class=\"am-text-danger\">由于您的浏览器不兼容或当前网速较慢，复制失败，请手动复制或更换主流浏览器！</div>");
-                    $('#fq_alert').modal();
-                    $(".agent_content").html('');
-                });
-            }
-        }
+//        var ua = navigator.userAgent.toLowerCase();
+//        if (ua.match(/iphone os 10/i) == "iphone os 10") {
+//            $('.fq-amoy-buy .copy_taowords').show();
+//            var clipboard = new Clipboard('.share', {
+//                target: function() {
+//                    return document.querySelector('.copy_taoword_content');
+//                }
+//            });
+//            clipboard.on('success', function(e){
+//                e.trigger.innerHTML="已复制";
+//                e.trigger.style.backgroundColor="#9ED29E";
+//                e.trigger.style.borderColor="#9ED29E";
+//                //var conpycontent=$(".share_content").html();
+//                //console.log(conpycontent);
+//                $(".copy_taoword_content").html('');
+//                console.info('Action:', e.action);
+//                console.info('Text:', e.text);
+//                console.info('Trigger:', e.trigger);
+//                e.clearSelection();
+//            });
+//            clipboard.on('error', function(e) {
+//                $(".copy_taoword_content").html('');
+//                $("#fq_alert_info").html("<div class=\"am-text-danger\">由于您的浏览器不兼容或当前网速较慢，复制失败，请手动复制或更换主流浏览器！</div><div class=\"am-margin\" style=\"text-align: left;\">"+$(".copy_taoword_content").html()+"</div>");
+//                $('#fq_alert').modal();
+//            });
+//        }
         document.addEventListener("selectionchange", function (e) {
             if (window.getSelection().anchorNode.parentNode.id == 'copy_key_ios' && document.getElementById('copy_key_ios').innerText != window.getSelection()) {
                 var key = document.getElementById('copy_key_ios');
@@ -398,38 +379,9 @@
             }
         }, false);
     });
-    document.addEventListener("selectionchange", function (e) {
-        if (window.getSelection().anchorNode.parentNode.id == 'copy_key_ios' && document.getElementById('copy_key_ios').innerText != window.getSelection()) {
-            var key = document.getElementById('copy_key_ios');
-            window.getSelection().selectAllChildren(key);
-        }
-        if (window.getSelection().anchorNode.parentNode.id == 'copy_key_ios1' && document.getElementById('copy_key_ios1').innerText != window.getSelection()) {
-            var key = document.getElementById('copy_key_ios1');
-            window.getSelection().selectAllChildren(key);
-        }
-        if (window.getSelection().anchorNode.parentNode.id == 'copy_key_ios2' && document.getElementById('copy_key_ios2').innerText != window.getSelection()) {
-            var key = document.getElementById('copy_key_ios2');
-            window.getSelection().selectAllChildren(key);
-        }
-        if (window.getSelection().anchorNode.parentNode.id == 'copy_key_ios3' && document.getElementById('copy_key_ios3').innerText != window.getSelection()) {
-            var key = document.getElementById('copy_key_ios3');
-            window.getSelection().selectAllChildren(key);
-        }
-        if (window.getSelection().anchorNode.parentNode.id == 'copy_key_ios4' && document.getElementById('copy_key_ios4').innerText != window.getSelection()) {
-            var key = document.getElementById('copy_key_ios4');
-            window.getSelection().selectAllChildren(key);
-        }
-        if (window.getSelection().anchorNode.parentNode.id == 'copy_key_ios5' && document.getElementById('copy_key_ios5').innerText != window.getSelection()) {
-            var key = document.getElementById('copy_key_ios5');
-            window.getSelection().selectAllChildren(key);
-        }
-    }, false);
-
     var ua = navigator.userAgent.toLowerCase();
     if (ua.match(/iphone/i) == "iphone" || ua.match(/ipad/i) == "ipad") {
-
         $('.fq-explain span').html("长按框内 > 拷贝");
-
     } else {
         $("#copy_key_ios").hide();
         $("#copy_key_ios1").hide();
@@ -449,6 +401,44 @@
         console.log(taowords);
         $('.copy_taoword_content').html(taowords);
     })
+
+    if(document.getElementById("copy_key_android")){
+        var taokouling_value = document.getElementById("copy_key_android").value;
+        function regain() {
+            document.getElementById('copy_key_android').value = taokouling_value;
+        }
+    }
+    if(document.getElementById("copy_key_android1")){
+        var taokouling_value1 = document.getElementById("copy_key_android1").value;
+        function regain1() {
+            document.getElementById('copy_key_android1').value = taokouling_value1;
+        }
+    }
+    if(document.getElementById("copy_key_android2")){
+        var taokouling_value2 = document.getElementById("copy_key_android2").value;
+        function regain2() {
+            document.getElementById('copy_key_android2').value = taokouling_value2;
+        }
+    }
+    if(document.getElementById("copy_key_android3")){
+        var taokouling_value3 = document.getElementById("copy_key_android3").value;
+        function regain3() {
+            document.getElementById('copy_key_android3').value = taokouling_value3;
+        }
+    }
+    if(document.getElementById("copy_key_android4")){
+        var taokouling_value4 = document.getElementById("copy_key_android4").value;
+        function regain4() {
+            document.getElementById('copy_key_android4').value = taokouling_value4;
+        }
+    }
+    if(document.getElementById("copy_key_android5")){
+        var taokouling_value5 = document.getElementById("copy_key_android5").value;
+        function regain5() {
+            document.getElementById('copy_key_android5').value = taokouling_value4;
+        }
+    }
+
 </script>
 </body>
 </html>
