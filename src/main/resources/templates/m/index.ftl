@@ -176,6 +176,7 @@
     </#list>
     </ul>
 
+    </button>
     <div style="" class="am-text-xs am-text-center am-margin-vertical-sm">
         猪猪淘精选-天猫内部优惠券 ©版权所有
     </div>
@@ -219,7 +220,6 @@
 
 </style>
 <script>
-
     $("#all_list").click(function () {
 
         //激活状态
@@ -382,6 +382,18 @@
     var ua = navigator.userAgent.toLowerCase();
     if (ua.match(/iphone/i) == "iphone" || ua.match(/ipad/i) == "ipad") {
         $('.fq-explain span').html("长按框内 > 拷贝");
+        $("#copy_key_ios").show();
+        $("#copy_key_ios1").show();
+        $("#copy_key_ios2").show();
+        $("#copy_key_ios3").show();
+        $("#copy_key_ios4").show();
+        $('#copy_key_ios5').show();
+        $("#copy_key_android").hide();
+        $("#copy_key_android1").hide();
+        $("#copy_key_android2").hide();
+        $("#copy_key_android3").hide();
+        $("#copy_key_android4").hide();
+        $("#copy_key_android5").hide();
     } else {
         $("#copy_key_ios").hide();
         $("#copy_key_ios1").hide();
