@@ -96,10 +96,10 @@ public class Top100 {
     }
 
     public String getSxInfo() {
-        if (DateUtils.addMinutes(createTime, 60).getTime() > (new Date()).getTime()) {
-            return "一小时内上新";
-        }
-        return "";
+//        if (DateUtils.addMinutes(createTime, 60).getTime() > (new Date()).getTime()) {
+//            return "一小时内上新";
+//        }
+        return "实时上新";
     }
 
     public String getCreatTimeDesc() {
