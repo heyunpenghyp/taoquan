@@ -1,0 +1,118 @@
+/*Í¨ÓÃ*/
+body {
+    background-color: #f3f3f3;
+    color: #3d0505;
+}
+
+.fq-price {
+    color: #f54d23;
+}
+
+.fq-reason {
+    color: #8f8f8f;
+}
+
+.fq-goods-border {
+    border: .1rem #f54d23 dashed;
+}
+
+.fq-coupon-border {
+    border: .1rem #f54d23 solid;
+}
+
+.fq-title,
+.fq-title:hover,
+.fq-title:focus {
+    color: #3d0505;
+}
+
+.fq-explain {
+    position: absolute;
+    width: 180px;
+    margin-top: -22px;
+    right: 20%;
+    left: 20%;
+}
+
+.fq-goods {
+    border: #f3f3f3 solid .1rem;
+}
+
+.am-thumbnail {
+    border: none;
+}
+
+.am-tab-panel img {
+    width: 100%;
+}
+
+.am-slider-a1 {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 1rem;
+}
+
+.am-slider-a1 .am-control-nav {
+    display: none;
+}
+
+.fq-nowrap {
+    background: #f54d23;
+}
+
+/*Í¨ÓÃ*/
+/*·µ»Ø¶¥²¿*/
+.am-gotop-fixed {
+    width: 40px;
+}
+
+.am-gotop-fixed .am-gotop-icon {
+    line-height: 40px;
+}
+/*·µ»Ø¶¥²¿*/
+
+/*ÉÌÆ·ËÑË÷*/
+.fq-search {
+    display: none;
+}
+
+.fq-search form {
+    position: relative;
+    top: 3px;
+    width: 100%;
+}
+
+.fq-search form input {
+    position: relative;
+    left: 5%;
+}
+
+.am-form input[type="text"] {
+    transition: none;
+    background: #f3f3f3;
+    border: 0;
+    width: 90%;
+}
+
+.am-form input[type="text"]:focus {
+    box-shadow: none;
+    background: #f3f3f3;
+    border: 0;
+    width: 90%;
+}
+
+.fq-search i {
+    position: relative;
+    top: 5px;
+    right: 10%;
+    color: #a2a2a2;
+}
+/*ÉÌÆ·ËÑË÷*/
+/*ÎÒÒªÍÆ¹ã½çÃæ*/
+.fq-amoy-buy textarea{
+    display:none;
+    border:none;
+    height:200px;
+
+}
+/*ÎÒÒªÍÆ¹ã½çÃæ*/
