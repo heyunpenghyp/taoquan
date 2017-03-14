@@ -20,7 +20,7 @@
         #{price},
         #{tkl},
         #{soldNum},
-        now()
+        #{createTime}
         )
     </insert>
 
