@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Date;
 
 /**
  * Created by Administrator on 2017/3/8 0008.
@@ -38,6 +39,7 @@ public class Top100Controller {
         top100.setSoldNum(soldNum);
         top100.setTkl(tkl);
         top100.setQuanUrl(quanUrl);
+        top100.setCreateTime(new Date());
         top100Dao.save(top100);
         return result;
     }
