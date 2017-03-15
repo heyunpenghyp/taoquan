@@ -1,7 +1,5 @@
-
 <!doctype html>
 <html class="no-js">
-
 <head>
 
     <meta charset="utf-8">
@@ -11,14 +9,8 @@
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/amazeui.min.css">
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/style.css" />
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/allinone.css" />
-
-
-
     <script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/jquery.min.js"></script>
     <script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/amazeui.min.js"></script>
-    <script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/fastclick.min.js"></script>
-    <script>$(function() {FastClick.attach(document.body);});</script>
-    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head>
 
 <body>
@@ -44,29 +36,7 @@
     </div>
 </div>
 
-
-<script>
-    function dangling(time,status){
-        if(status == 1){
-            $('.fq-custom').css('animation','myfirst 0.6s linear 1s infinite alternate');
-        }else{
-            $('.fq-custom').css('animation','none');
-        }
-        var t = setInterval(function(){
-            if(status == 1){
-                dangling(1000,0);
-            }else{
-                dangling(5000,1);
-            }
-            clearInterval(t);
-        },time);
-    }
-    setTimeout(dangling(1000,0),4000);
-</script>
-
 <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/index.css" />
-<link rel="stylesheet" href="http://at.alicdn.com/t/font_musrna5217om9529.css">
-<link rel="stylesheet" href="http://at.alicdn.com/t/font_mnjw8a93gpv3rf6r.css">
 <style>
     .column_list .iconfont {
         font-size: 24px;
@@ -83,18 +53,12 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
     }
-
-
 </style>
 
 
 
 
 <div class="main">
-
-    <script type="text/javascript" src="http://at.alicdn.com/t/font_5vjtf6axci60f6r.js"></script>
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_f5cc03rvbekrcnmi.css">
-
     <style type="text/css">
         .icon {
             width: 40px;
@@ -142,7 +106,7 @@
     <ul class="am-avg-sm-2 am-margin-top-sm item_list">
     <#list productList as product>
         <li class="fq-goods am-padding-bottom-sm am-text-center" id="goods-item-content">
-            <img class="am-thumbnail am-margin-bottom-0 am-block tobuy" data-p="1"  src="${product.picUrl}" />
+            <img class="lazy am-thumbnail am-margin-bottom-0 am-block tobuy" data-p="1"  xSrc="${product.picUrl}" width="430px" height="430px"  src="${springMacroRequestContext.contextPath}/images/o_pixel.gif"/>
             <a class="am-block am-text-sm am-text-truncate am-padding-horizontal-xs fq-title am-padding-bottom-xs tobuy" data-id="276245182" data-p="1" >
                 <strong class="item_details">${product.title}</strong>
             </a>
@@ -175,8 +139,13 @@
         </li>
     </#list>
     </ul>
-
-    </button>
+    <script type="text/javascript">
+        var lazyImages = $(".lazy");
+        for (var i = 0; i < lazyImages.length; i++) {
+            var lazyImage = lazyImages[i];
+            $(lazyImage).attr("src", $(lazyImage).attr("xSrc"));
+        }
+    </script>
     <div style="" class="am-text-xs am-text-center am-margin-vertical-sm">
         猪猪淘精选-天猫内部优惠券 ©版权所有
     </div>
@@ -216,57 +185,7 @@
     .menu a span {
         font-size:1.2rem;
     }
-
-
 </style>
-<script>
-    $("#all_list").click(function () {
-
-        //激活状态
-        $("#fq-classify").addClass("active");
-        $("#all_list").attr("class","am-block fq-classify active");
-        $("#all_list").css("color","#f54d23");
-        $(".column_list a").removeClass("active");
-
-        //分类展示
-        $(".fq-type").slideToggle();
-
-    });
-
-
-    $("#fq_alllist").click(function () {
-
-        $("#fq_alllist").addClass("active");
-        $("#fq_alllist").attr("class","am-block fq-classify");
-        $("#fq_alllist").css({"color":"#f54d23","border-bottom":".3rem solid #f54d23"});
-        $(".column_list a").removeClass("active");
-
-        $(".fq-newtype").slideToggle();
-
-    });
-
-    //平滑滚动回顶部
-    $('.main').on('scroll',function(){
-
-        $('.am-gotop-fixed').css('display','block');
-
-        if ($('.main').scrollTop() === 0) {
-            $('.am-gotop-fixed').css('display','none');
-        }
-
-    });
-
-    $('.fq-top').click(function(){
-        $('.main').animate({
-            scrollTop:$('.header_content').offset().top}, 800);
-    });
-
-
-    $('.fq-confirm').click(function(){
-        $('.fq-lose').css('display','none');
-    });
-
-</script>
 
 <script>
     function changeTaokouling(obj) {
@@ -276,7 +195,7 @@
 </script>
 
 <div class="am-hide"></div>
-<script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/clipboard.min.js"></script>
+<#--<script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/clipboard.min.js"></script>-->
 <!--底部菜单-->
 <div class="fq-amoy-buy am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
     <div class="fq-background-white am-modal-dialog">
