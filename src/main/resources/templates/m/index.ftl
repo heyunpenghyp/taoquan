@@ -12,46 +12,15 @@
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/index.css" />
     <script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/jquery.min.js"></script>
     <script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/amazeui.min.js"></script>
-    <script type="text/javascript">
-        $(window).load(function() {
-            var lazyImages = $(".lazy");
-            for (var i = 0; i < lazyImages.length; i++) {
-                var lazyImage = lazyImages[i];
-                $(lazyImage).attr("src", $(lazyImage).attr("xSrc"));
-            }
-        });
-    </script>
 </head>
 
 <body>
-<div class="am-modal am-modal-alert" tabindex="-1" id="fq_alert">
-    <div class="am-modal-dialog">
-        <div class="am-modal-hd" id="fq_alert_title"></div>
-        <div class="am-modal-bd" id="fq_alert_info">
-        </div>
-        <div class="am-modal-footer">
-            <span class="am-modal-btn">确定</span>
-        </div>
-    </div>
-</div>
-
-<div class="am-modal am-modal-confirm" tabindex="-1" id="fq_confirm">
-    <div class="am-modal-dialog">
-        <div class="am-modal-hd" id="fq_confirm_title"></div>
-        <div class="am-modal-bd" id="fq_confirm_info"></div>
-        <div class="am-modal-footer">
-            <span class="am-modal-btn" data-am-modal-confirm>确定</span>
-        </div>
-    </div>
-</div>
-
-
 <div class="main">
     <!-- 全部推荐商品开始 -->
     <ul class="am-avg-sm-2 am-margin-top-sm item_list">
     <#list productList as product>
         <li class="fq-goods am-padding-bottom-sm am-text-center" id="goods-item-content">
-            <img class="lazy am-thumbnail am-margin-bottom-0 am-block tobuy" data-p="1"  xSrc="${product.picUrl}" width="430px" height="430px"/>
+            <img class="lazy am-thumbnail am-margin-bottom-0 am-block tobuy" data-p="1"  data-original="${product.picUrl}" src="${springMacroRequestContext.contextPath}/images/mobile/download.gif" width="430px" height="430px"/>
             <a class="am-block am-text-sm am-text-truncate am-padding-horizontal-xs fq-title am-padding-bottom-xs tobuy" data-id="276245182" data-p="1" >
                 <strong class="item_details">${product.title}</strong>
             </a>
@@ -276,6 +245,12 @@
         }
     }
 
+</script>
+<script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/lazyload.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $("img.lazy").lazyload();
+    });
 </script>
 </body>
 </html>
