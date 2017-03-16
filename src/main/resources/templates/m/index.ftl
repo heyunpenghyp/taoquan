@@ -1,20 +1,29 @@
-<!doctype html>
-<html class="no-js">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <title>猪猪淘精选-天猫内部优惠券</title>
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/amazeui.min.css">
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/style.css" />
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/allinone.css" />
+    <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/grandeur.css" />
+    <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/index.css" />
     <script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/jquery.min.js"></script>
     <script type="text/javascript" src="${springMacroRequestContext.contextPath}/js/m/amazeui.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            var lazyImages = $(".lazy");
+            for (var i = 0; i < lazyImages.length; i++) {
+                var lazyImage = lazyImages[i];
+                $(lazyImage).attr("src", $(lazyImage).attr("xSrc"));
+            }
+        });
+    </script>
 </head>
 
 <body>
-
 <div class="am-modal am-modal-alert" tabindex="-1" id="fq_alert">
     <div class="am-modal-dialog">
         <div class="am-modal-hd" id="fq_alert_title"></div>
@@ -36,77 +45,13 @@
     </div>
 </div>
 
-<link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/index.css" />
-<style>
-    .column_list .iconfont {
-        font-size: 24px;
-    }
-
-    #all_list .icon-fenlei2  {
-        font-size: 24px;
-    }
-    .line-clamp {
-        height: 40px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-    }
-</style>
-
-
-
 
 <div class="main">
-    <style type="text/css">
-        .icon {
-            width: 40px;
-            height: 40px;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-
-        .fq-newtype {
-            display: none;
-            position: absolute;
-            z-index: 100;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.2);
-            border-left: .1rem solid #f3e7e3;
-            border-right: .1rem solid #f3e7e3;
-        }
-
-        .fq-newtype ul li {
-            background: white;
-            width: 25%;
-            border-top: .1rem solid #f3e7e3;
-            border-left: .1rem solid #f3e7e3;
-        }
-
-        .fq-newtype ul li a,
-        .fq-newtype ul li a:hover,
-        .fq-newtype ul li a:focus {
-            color: #8f8f8f;
-        }
-
-        .fq-coupon1 {
-            background-color: #3bb4f2;
-            clear: right;
-        }
-
-
-    </style>
-
-    <!-- 单独推荐商品结束 -->
-    <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/m/grandeur.css" />
     <!-- 全部推荐商品开始 -->
     <ul class="am-avg-sm-2 am-margin-top-sm item_list">
     <#list productList as product>
         <li class="fq-goods am-padding-bottom-sm am-text-center" id="goods-item-content">
-            <img class="lazy am-thumbnail am-margin-bottom-0 am-block tobuy" data-p="1"  xSrc="${product.picUrl}" width="430px" height="430px"  src="${springMacroRequestContext.contextPath}/images/o_pixel.gif"/>
+            <img class="lazy am-thumbnail am-margin-bottom-0 am-block tobuy" data-p="1"  xSrc="${product.picUrl}" width="430px" height="430px"/>
             <a class="am-block am-text-sm am-text-truncate am-padding-horizontal-xs fq-title am-padding-bottom-xs tobuy" data-id="276245182" data-p="1" >
                 <strong class="item_details">${product.title}</strong>
             </a>
@@ -139,13 +84,7 @@
         </li>
     </#list>
     </ul>
-    <script type="text/javascript">
-        var lazyImages = $(".lazy");
-        for (var i = 0; i < lazyImages.length; i++) {
-            var lazyImage = lazyImages[i];
-            $(lazyImage).attr("src", $(lazyImage).attr("xSrc"));
-        }
-    </script>
+
     <div style="" class="am-text-xs am-text-center am-margin-vertical-sm">
         猪猪淘精选-天猫内部优惠券 ©版权所有
     </div>
@@ -153,39 +92,6 @@
 
 
 
-
-<style>
-    .main{
-        bottom:0px;
-    }
-</style>
-<style>
-    .menu{
-        width:100%;
-        position:absolute;
-        position:fixed;
-
-        bottom:0;
-        background:#fff;
-        border-top:.1rem solid #F3E7E3;
-        z-index:999;
-    }
-    .menu img {
-        width:1.5rem;
-        height:1.5rem;
-        margin-bottom:.2rem;
-    }
-
-    .menu a {
-        display:inline-block;
-        color:#3d0505;
-
-    }
-
-    .menu a span {
-        font-size:1.2rem;
-    }
-</style>
 
 <script>
     function changeTaokouling(obj) {
